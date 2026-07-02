@@ -20,5 +20,18 @@
             "pricePerEvent": 0.0005,
             "description": "Charged per web page successfully scanned for broken images"
         }
-    ]
+    ],
+    "isPublic": true,
+    "seoTitle": "Broken Image Finder | Apify Actor",
+    "seoDescription": "Automatically crawl any website to detect and report broken images (404s, 500s). Keep your site looking professional and boost SEO.",
+    "categories": [
+        "BUSINESS",
+        "DATA_EXTRACTION",
+        "LEAD_GENERATION"
+    ],
+    "defaultRunOptions": {
+        "build": "latest",
+        "timeoutSecs": 1800,
+        "memoryMbytes": 256
+    }
 }
