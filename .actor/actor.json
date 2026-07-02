@@ -1,0 +1,24 @@
+{
+    "actorSpecification": 1,
+    "name": "broken-image-finder",
+    "title": "Broken Image Finder",
+    "description": "Automatically crawl any website to detect and report broken images (404s, 500s). Keep your site looking professional and boost SEO.",
+    "version": "0.0",
+    "input": "./input_schema.json",
+    "dockerfile": "../Dockerfile",
+    "minMemoryMbytes": 256,
+    "maxMemoryMbytes": 1024,
+    "pricingModel": "PAY_PER_EVENT",
+    "pricingEvents": [
+        {
+            "eventName": "apify-actor-start",
+            "pricePerEvent": 0.00005,
+            "description": "Charged once when Actor starts"
+        },
+        {
+            "eventName": "page-scanned",
+            "pricePerEvent": 0.0005,
+            "description": "Charged per web page successfully scanned for broken images"
+        }
+    ]
+}

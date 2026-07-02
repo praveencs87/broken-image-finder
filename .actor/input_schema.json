@@ -1,0 +1,34 @@
+{
+    "title": "Broken Image Finder Input",
+    "type": "object",
+    "schemaVersion": 1,
+    "properties": {
+        "startUrls": {
+            "title": "Start URLs",
+            "type": "array",
+            "description": "List of URLs to start scanning for broken images. The crawler will follow links on the same domain.",
+            "editor": "requestListSources",
+            "default": [{"url": "https://example.com"}],
+            "prefill": [{"url": "https://example.com"}]
+        },
+        "maxPagesPerCrawl": {
+            "title": "Max Pages to Scan",
+            "type": "integer",
+            "description": "Maximum number of pages to crawl across the entire site.",
+            "editor": "number",
+            "minimum": 1,
+            "maximum": 50000,
+            "default": 100,
+            "prefill": 100
+        },
+        "checkExternalImages": {
+            "title": "Check External Images",
+            "type": "boolean",
+            "description": "If enabled, the actor will also ping images hosted on third-party domains (CDNs, S3, etc.).",
+            "editor": "checkbox",
+            "default": true,
+            "prefill": true
+        }
+    },
+    "required": ["startUrls"]
+}
