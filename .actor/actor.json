@@ -1,42 +1,45 @@
 {
-    "actorSpecification": 1,
-    "name": "broken-image-finder",
-    "title": "Broken Image Finder",
-    "description": "Automatically crawl any website to detect and report broken images (404s, 500s). Keep your site looking professional and boost SEO.",
-    "version": "0.0",
-    "input": "./input_schema.json",
-    "dockerfile": "../Dockerfile",
-    "minMemoryMbytes": 1024,
-    "maxMemoryMbytes": 4096,
-    "pricingModel": "PAY_PER_EVENT",
-    "pricingEvents": [
-        {
-            "eventName": "apify-actor-start",
-            "pricePerEvent": 0.00005,
-            "description": "Charged once when Actor starts"
-        },
-        {
-            "eventName": "page-scanned",
-            "pricePerEvent": 0.0005,
-            "description": "Charged per web page successfully scanned for broken images"
-        },
-        {
-            "eventName": "lead-extracted",
-            "pricePerEvent": 0.005,
-            "description": "Charged per lead extracted"
-        }
-    ],
-    "isPublic": true,
-    "seoTitle": "Broken Image Finder | Apify Actor",
-    "seoDescription": "Automatically crawl any website to detect and report broken images (404s, 500s). Keep your site looking professional and boost SEO.",
-    "categories": [
-        "BUSINESS",
-        "DATA_EXTRACTION",
-        "LEAD_GENERATION"
-    ],
-    "defaultRunOptions": {
-        "build": "latest",
-        "timeoutSecs": 1800,
-        "memoryMbytes": 4096
+  "actorSpecification": 1,
+  "name": "broken-image-finder",
+  "title": "Broken Image Finder",
+  "description": "Automatically crawl any website to detect and report broken images (404s, 500s). Keep your site looking professional and boost SEO.",
+  "version": "0.0",
+  "input": "./input_schema.json",
+  "dockerfile": "../Dockerfile",
+  "minMemoryMbytes": 1024,
+  "maxMemoryMbytes": 4096,
+  "pricingModel": "PAY_PER_EVENT",
+  "pricingEvents": [
+    {
+      "eventName": "apify-actor-start",
+      "pricePerEvent": 0.00005,
+      "description": "Charged once when Actor starts"
+    },
+    {
+      "eventName": "page-scanned",
+      "pricePerEvent": 0.0005,
+      "description": "Charged per web page successfully scanned for broken images"
+    },
+    {
+      "eventName": "lead-extracted",
+      "pricePerEvent": 0.005,
+      "description": "Charged per lead extracted"
     }
+  ],
+  "isPublic": true,
+  "seoTitle": "Broken Image Finder | Apify Actor",
+  "seoDescription": "Automatically crawl any website to detect and report broken images (404s, 500s). Keep your site looking professional and boost SEO.",
+  "categories": [
+    "BUSINESS",
+    "DATA_EXTRACTION",
+    "LEAD_GENERATION"
+  ],
+  "defaultRunOptions": {
+    "build": "latest",
+    "timeoutSecs": 1800,
+    "memoryMbytes": 4096
+  },
+  "storages": {
+    "dataset": "./dataset_schema.json"
+  }
 }
