@@ -1,3 +1,4 @@
+import { armKillSwitch, disarmKillSwitch } from './utils/timeoutManager.js';
 import { Actor } from 'apify';
 import { CheerioCrawler, log, enqueueLinks } from 'crawlee';
 import { gotScraping } from 'got-scraping';
@@ -132,7 +133,9 @@ try {
 
     log.info('Starting crawler...');
     await crawler.addRequests(startUrls);
+    armKillSwitch(crawler);
     await crawler.run();
+    disarmKillSwitch();
 
     log.info(`🎉 Finished! Scanned ${pagesScanned} pages and found ${brokenImagesFound} broken unique images.`);
 } catch (error) {
